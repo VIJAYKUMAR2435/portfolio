@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Vijay Kumar - Final Year CSE Student specializing in Data Analysis and DevOps.">
+    <meta name="keywords" content="Vijay Kumar, Portfolio, CSE, Data Analysis, DevOps, Web Development">
+    <meta name="author" content="Vijay Kumar">
+    <title>Vijay Kumar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --text-color: #ffffff;
+            --background-light: #f0f0f0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: aquamarine;
+        }
+
+        .hero {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            display: block;
+            border: 3px solid var(--text-color);
+            object-fit: cover;
+        }
+
+        .section {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        #skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #skills li {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--background-light);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        #skills li i {
+            margin-right: 0.5rem;
+        }
+
+        #skills li:hover {
+            transform: scale(1.1);
+            background: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        #resume a {
+            text-decoration: none;
+            color: var(--text-color);
+            background: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        #contact .contact-buttons a {
+            display: inline-block;
+            margin: 0.5rem;
+            text-decoration: none;
+            color: var(--text-color);
+            background: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        #contact .contact-buttons a:hover {
+            background: var(--secondary-color);
+        }
+
+        #chatbot {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+        }
+
+        #chatbot-toggle {
+            background: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #chatbot-window {
+            display: none;
+            position: fixed;
+            bottom: 4rem;
+            right: 1rem;
+            width: 300px;
+            height: 400px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #chatbot-window iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            #contact .contact-buttons a {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            #chatbot {
+                bottom: 0.5rem;
+                right: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <img src="profile.png" alt="Profile photo of Vijay Kumar" class="profile-photo">
+        <h1>Vijay Kumar</h1>
+        <p>Final Year CSE Student | Aspiring Software Developer and Frontend Developer</p>
+    </header>
+
+    <section id="introduction" class="section">
+        <h2>Introduction</h2>
+        <p>Hello! I'm Vijay Kumar from Gaya, Bihar. I'm passionate about solving complex problems, building interactive web solutions, and exploring Competitive programming.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li><i class="fas fa-chart-line"></i>Data Structure and Algorithm</li>
+            <li><i class="fas fa-cogs"></i>Dev Tools (VsCode,Git)</li>
+            <li><i class="fas fa-code"></i>Frontend Development (HTML, CSS, ReactJS)</li>
+            <li><i class="fas fa-terminal"></i>Programming (C++, Python, JavaScript)</li>
+        </ul>
+    </section>
+
+    <section id="resume" class="section">
+        <h2>Resume Overview</h2>
+        <p><a href="resume.pdf" download="VijayKumar_Resume.pdf">Download My Resume</a></p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-buttons">
+            <a href="https://linkedin.com/in/vijaykumar" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/VIJAYKUMAR2435" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i> GitHub</a>
+            <a href="mailto:vijaykumar@example.com" aria-label="Send Email"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+    </section>
+
+    <div id="chatbot">
+        <button id="chatbot-toggle" aria-label="Toggle Chatbot">💬</button>
+        <div id="chatbot-window">
+            <iframe src="https://your-llm-chatbot-endpoint.com?apiKey=yourApiKey" title="Interactive Chatbot"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWindow.style.display = chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '' ? 'block' : 'none';
+        });
+
+        chatbotWindow.addEventListener('error', () => {
+            alert('Chatbot is currently unavailable. Please try again later.');
+        });
+    </script>
+</body>
+</html>
